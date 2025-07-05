@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Extension Udemy",
+  "version": "1.0",
+  "description": "Esta Extension permite copiar el transcript de un video de Udemy.",
+  "action": {
+  },
+  "permissions": [
+    "clipboardWrite"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.udemy.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
